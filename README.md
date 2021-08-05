@@ -63,7 +63,14 @@ def count_weight(W):
             W[i, j] = temp_w
 ```
 
-
-
-
+每次迭代时：复制评分矩阵，将正确数据待会，计算相似度和评分，归一化，计算MAE
+```python
+    def iter(self):
+        self.DVD = self.P
+        self.change()
+        self.compute_similarity()
+        self.compute_grade()
+        self.normalizer()
+        self.compute_MAE()
+```
 
